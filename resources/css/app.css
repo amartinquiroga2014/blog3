@@ -1,0 +1,91 @@
+/* @import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities'; */
+
+/* @layer components {
+    .btn {
+        @apply bg-gray-300 px-3 py-2 hover:bg-gray-200;
+    }
+
+    .btn-primary {
+        @apply bg-indigo-500 text-white px-3 py-2 hover:bg-indigo-400;
+    }
+
+    .form-group {
+        @apply flex flex-col mt-2;
+    }
+
+    .form-group label {
+        @apply font-bold;
+    }
+
+    .form-group input, .form-group textarea {
+        @apply border border-gray-300 px-2 py-1;
+    }
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {                     
+    width: 50%;
+    margin-left  : auto;
+    margin-right : auto;
+}
+
+.container article h1 {
+    margin-bottom: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.container article h1 a{
+    color: #333;
+    text-decoration: none;
+}
+
+.container article p {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.form-post {
+    gap: .5rem 0rem;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto 0 auto;
+}
+
+.form-group{
+    display:flex;
+    flex-direction: column;
+}
+
+.btn {
+    background-color: #bbb;
+    border: 1px solid #ccc;
+    color: black;
+    font-size: 1rem;
+    padding: .3rem .5rem .3rem .5rem;
+    text-decoration: none;    
+}
+
+.btn:hover{
+    background-color: #ccc;
+ }
+
+ .btn-primary{
+    background-color: rgb(42, 129, 230);
+    border: 1px solid rgb(42, 129, 230);
+    color: white;
+    font-size: 1rem;
+    padding: .3rem .5rem;
+    text-decoration: none;
+ }
+ .btn-primary:hover{
+    background-color: rgb(13, 99, 197);
+ }
