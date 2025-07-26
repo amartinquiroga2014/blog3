@@ -6,8 +6,8 @@ use Illuminate\Foundation\Configuration\Middleware;
 //use Illuminate\Foundation\http\Middleware\TrimStrings;
 use Illuminate\Auth\Middleware\RedirectIftAuthenticated;
 use Illuminate\Auth\Middleware\RedirectIfAuthenticated;
-use App\Http\Middleware\CommentsForbiddenWords;
-use App\Http\Middleware\TestMiddleware;
+//use App\Http\Middleware\CommentsForbiddenWords;
+//use App\Http\Middleware\TestMiddleware;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -22,12 +22,12 @@ return Application::configure(basePath: dirname(__DIR__))
         //     'clave',
         //]);
 
-        RedirectIfAuthenticated::redirectUsing(function ($request) {
-                return route('admin');             // /admin
-        });
+        //RedirectIfAuthenticated::redirectUsing(function ($request) {
+        //        return route('admin');             // /admin
+        //});
 
         // $middleware->web(CommentsForbiddenWords::class);
-        $middleware->web(TestMiddleware::class);
+        //$middleware->web(TestMiddleware::class);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
