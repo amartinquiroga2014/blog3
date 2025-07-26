@@ -3,7 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
-use Illuminate\Foundation\http\Middleware\TrimStrings;
+//use Illuminate\Foundation\http\Middleware\TrimStrings;
 use Illuminate\Auth\Middleware\RedirectIftAuthenticated;
 use Illuminate\Auth\Middleware\RedirectIfAuthenticated;
 use App\Http\Middleware\CommentsForbiddenWords;
@@ -16,11 +16,11 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__.'/../routes/console.php',
         health: '/up',
     )
-    ->withMiddleware(function (Middleware $middleware): void {
+    ->withMiddleware(function (Middleware $middleware) {
 
-        TrimStrings::except([
-             'clave',
-        ]);
+        //TrimStrings::except([
+        //     'clave',
+        //]);
 
         RedirectIfAuthenticated::redirectUsing(function ($request) {
                 return route('admin');             // /admin
